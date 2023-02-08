@@ -1,0 +1,54 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Jalal_LAB01
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("How many letter grades?");
+        int num = input.nextInt();
+
+        printNRandomLetterGrades(num);
+
+        input.close();
+    }
+
+    public static void printNRandomLetterGrades(int n){
+
+        int random;
+
+        for(int i = 1;i<= n; i++){
+
+            // assign new value for each time
+            random = (int) (Math.random() * (9));
+
+//            System.out.println(random);
+            System.out.println(i);
+            switch (random){
+                case 0: return("A+");
+                    break;
+                case 1: return("A");
+                    break;
+                case 2: return("B+");
+                    break;
+                case 3: return("B");
+                    break;
+                case 4: return("C+");
+                    break;
+                case 5: return("C");
+                    break;
+                case 6: return("D+");
+                    break;
+                case 7: return("D");
+                    break;
+                case 8: return("F");
+                break;
+                default:
+                    return(random);
+
+            }
+
+        }
+    }
+}
